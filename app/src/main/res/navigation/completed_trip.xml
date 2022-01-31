@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/completed_trip"
+    app:startDestination="@id/completedTripsFragment">
+
+    <fragment
+        android:id="@+id/completedTripsFragment"
+        android:name="com.practice.navigationviewpager2.CompletedTripsFragment"
+        android:label="Completed Trips"
+        tools:layout="@layout/fragment_completed_trips" >
+        <action
+            android:id="@+id/action_completedTripsFragment_to_completedTripsDetailed"
+            app:destination="@id/completedTripsDetailed" />
+    </fragment>
+    <fragment
+        android:id="@+id/completedTripsDetailed"
+        android:name="com.practice.navigationviewpager2.CompletedTripsDetailed"
+        android:label="Detailed"
+        tools:layout="@layout/fragment_completed_trips_detailed" />
+</navigation>
